@@ -9,4 +9,3 @@ def add_tuple(tuple_a=(), tuple_b=()):
     sum_1 = aList[1] + bList[1]
     tuple_c = (sum_0, sum_1)
     return tuple_c
-

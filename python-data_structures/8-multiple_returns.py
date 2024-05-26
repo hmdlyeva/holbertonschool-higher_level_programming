@@ -7,4 +7,3 @@ def multiple_returns(sentence):
         c = sentence[0]
     tup = (l, c)
     return tup
-
