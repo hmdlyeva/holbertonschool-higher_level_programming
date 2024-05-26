@@ -12,4 +12,3 @@ def best_score(my_dict):
     if score == 0:
         return None
     return key
-
