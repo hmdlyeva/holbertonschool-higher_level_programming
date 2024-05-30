@@ -4,6 +4,7 @@ Module for a class Rectangle
 that inherits from BaseGeometry
 """
 
+
 class BaseGeometry:
     """
     Base geometry class
