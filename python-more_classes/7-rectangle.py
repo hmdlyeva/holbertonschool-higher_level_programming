@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """ Rectangle Module - For rectangular purposes only. """
 
