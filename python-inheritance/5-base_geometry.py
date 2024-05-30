@@ -5,12 +5,5 @@ module for an empty class BaseGeometry
 
 
 class BaseGeometry:
-    """
-    the superclass BaseGeometry is empty
-    """
+    """empty class"""
     pass
-
-    # another way to do it
-    # def __init__(self):
-    # print(BaseGeometry)
-    # not properties etc.
