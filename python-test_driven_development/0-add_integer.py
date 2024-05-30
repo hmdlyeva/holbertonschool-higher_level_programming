@@ -4,6 +4,8 @@ This is the addition module.
 it adds 2 integers
 a and b must be first casted
 """
+
+
 def add_integer(a, b=98):
      """a and are integers
     Returns an integer: the addition of a and b
