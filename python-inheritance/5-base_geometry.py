@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 module for an empty class BaseGeometry
@@ -15,4 +14,3 @@ class BaseGeometry:
     # def __init__(self):
     # print(BaseGeometry)
     # not properties etc.
-
