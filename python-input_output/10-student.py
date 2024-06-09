@@ -19,4 +19,3 @@ class Student:
             if key in attrs:
                 new_dictionary[key] = value
         return new_dictionary
-    
