@@ -30,10 +30,10 @@ def get_user(username):
 def add_user():
     data = request.get_json()
     username = data.get('username')
-    if not username:
-        return jsonify({"error": "Username is required"}), 400
-    elif username in users.keys():
+    if username in users:
         return jsonify({"error": "User already exists"}), 400
+    elif not username:
+        return jsonify({"error": "Username is required"}), 400
     else:
         users[username] = {
             "username": username,
