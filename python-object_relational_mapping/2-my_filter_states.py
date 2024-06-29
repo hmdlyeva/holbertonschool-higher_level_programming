@@ -9,23 +9,9 @@ import sys
 import MySQLdb
 
 if __name__ == "__main__":
-    if len(sys.argv) != 5:
-        print("Usage: ./2-my_filter_states.py <mysql username> <mysql password> <database name> <state name searched>")
-        sys.exit(1)
-
-    username = sys.argv[1]
-    password = sys.argv[2]
-    database = sys.argv[3]
-    state_name = sys.argv[4]
-
-    try:
-        db = MySQLdb.connect(host="localhost", port=3306, user=username, passwd=password, db=database)
-        c = db.cursor()
-        c.execute("SELECT * FROM `states` WHERE `name` = %s ORDER BY id ASC", (state_name,))
-        results = c.fetchall()
-        for row in results:
-            print(row)
-        c.close()
-        db.close()
-    except MySQLdb.Error as e:
-        print("MySQL Error:", e)
+    db = MySQLdb.connect(user=sys.argv[1], passwd=sys.argv[2], db=sys.argv[3])
+    c = db.cursor()
+    c.execute("SELECT * \
+                 FROM `states` \
+                WHERE BINARY `name` = '{}'".format(sys.argv[4]))
+    [print(state) for state in c.fetchall()]
