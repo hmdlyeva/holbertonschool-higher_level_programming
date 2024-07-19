@@ -25,6 +25,7 @@ def read_csv():
 				"category": row['category'],
 				"price": float(row['price'])
             })
+    return products       
 
 def read_db():
     products = []
