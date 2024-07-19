@@ -1,7 +1,12 @@
 from flask import Flask, render_template
-from read_json import read
+import json
 
 app = Flask(__name__)
+
+def read(file_path):
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+    return data
 
 @app.route('/')
 def home():
